@@ -7,7 +7,7 @@ from flask import render_template,request,,redirect,url_for,flash
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    return render_template('form.html')
   
   
 @app.route('/')
