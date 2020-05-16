@@ -12,7 +12,7 @@ class MyForm(FlaskForm):
     Gender= RadioField('Gender', choices=[('F','Female'),('M','Male')])
     
     
-    class PhotoForm(FlaskForm):
+    class MyFile(FlaskForm):
     photo = FileField('Photo', validators=[
         FileRequired(),
         FileAllowed(['jpg', 'png', 'Images only!'])
