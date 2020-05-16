@@ -1,9 +1,7 @@
 from app import app
 from flask import render_template,request,,redirect,url_for,flash
 from werkzeug.utils import secure_filename
-
-
-
+from .forms import MyForm,MyFile
 
 
 @app.route('/profile')
