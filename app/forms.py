@@ -10,6 +10,7 @@ class MyForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     location =StringField('location'), validators=[DataRequired()])
     Gender= RadioField('Gender', choices=[('F','Female'),('M','Male')])
+    Bio= TextAreaField('Biography', validators=[DataRequired(),length(max=200)])
     
     
     class MyFile(FlaskForm):
