@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+	% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" type="text/css"/>
+{% endblock %}
+
+<form action="{{url_for('property',propertyid=prop.id)}}" method="post"  enctype="multipart/form-data">
+
+
+<div class = "property">
+	{% if prop.photo_filename %}
+		 <img src="{{ url_for('get_image',filename=get_image )}}">{{get_iamge}}
+    {% endif %}
+
+</div>
+
+<div class= "propertyinfo">
+	<h2><strong>{{prop.title}}</strong></h2>
+	<p><strong>{{prop.price}} {{prop.property_type}}</strong></p>
+	<p><strong>{{prop.description}}</strong></p>
+	<p><strong>{{prop.No_of_rooms}} {{prop.No_of_bathrooms}}</strong></p>
+	<p><strong>{{prop.location}}</strong></p>
+
+	<button class="btn btn-sm btn-info submit-btn" type="submit">POST</button>
+</div>
+</form>
+{% endblock %}
+

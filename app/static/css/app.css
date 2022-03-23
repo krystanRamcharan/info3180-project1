@@ -1,3 +1,64 @@
 body {
     padding-top: 5rem;
 }
+
+
+.form-section{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size:20px;
+}
+
+
+.send-btn{
+  background-color:#0096FF;
+  border-radius:12px;
+  color:white;
+  padding:10px;
+  font-size:12px;
+  margin: 4px 2px;
+  display:block;
+  width: 10%;
+}
+
+.grid-container{
+   display:inline-grid;
+   grid-template-columns: auto auto auto auto;
+  
+
+}
+
+.grid-item {
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    
+}
+
+
+.form-elements{
+	width: 300px;
+        
+
+}
+
+.description-box{
+      width:auto;
+      display: block;
+      overflow: hidden;
+      resize: both;
+      min-height: 40px;
+      line-height: 20px;
+      rows= "4";
+
+}
+
+.title{
+   width:100%;
+   
+
+}
+
+
+.form-data{
+    font-family: "Lucida Console", "Courier New", monospace;
+}

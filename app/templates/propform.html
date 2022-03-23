@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}" type="text/css"/>
+{% endblock %}
+
+{% block main %}
+<h1><b> Add New Property</b> </h1>
+<form method="post" action="{{url_for('property_form')}}" enctype="multipart/form-data">
+	 {{ form.csrf_token }}
+	 	 <div class= "form-section">
+     	<b>{{ form.title.label }}</b></br> 
+        <div class="title">
+     	{{form.title(class="form-elements")}}
+     </div>
+     </div></br>
+
+     <div class= "form-section">
+     	<b>{{form.description.label}}</b></br> 
+     	 <div class= "description-box">
+            {{form.description }}
+        </div>
+     </div></br>
+     <div class="grid-container">
+     <div class = "grid-item">
+     	<b>{{form.rooms.label}}</b></br> 
+     	   {{form.rooms(class="form-elements")}}
+     </div></br>
+
+     <div class= "grid-item">
+     	<b>{{form.bathrooms.label}}</b></br>
+      	   {{form.bathrooms(class="form-elements")}}
+     </div></br>
+     <div class= "grid-item">
+     	<b>{{form.price.label}}</b></br>
+      	   {{form.price(class="form-elements")}}
+     </div></br>
+
+     <div class= "grid-item">
+     	<b>{{form.proptype.label}}</b></br>
+      	   {{form.proptype(class="form-elements")}}
+     </div></br>
+     </div>
+     <div class= "from-data">
+     	<b>{{form.location.label}}</b></br>
+      	   {{form.location(class="form-elements")}}
+     </div></br>
+
+      <div class= "form-data">
+     	<b>{{form.photo.label}}</b></br>
+     	   {{form.photo(class="form-elements")}}
+     </div></br>
+
+    
+    <button type="submit" value= Upload class="send-btn"><b>Add Property</b></button>
+
+
+</form>
+
+{% endblock %}
+
